@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Quoc Vu
+  description: Install Yaourt the AUR helper on an ArchLinux host
+  company: N/A
+  license: MIT
+  min_ansible_version: 1.6
+  github_branch: master
+  platforms:
+    - name: ArchLinux
+      versions:
+        - all
+  galaxy_tags:
+    - archlinux
+    - aur
+    - helper
+    - linux
+    - package
+    - yaourt
+
+dependencies: []

@@ -1,0 +1,43 @@
+---
+# tasks file for pacaur-archlinux
+
+- name: install dependencies
+  pacman:
+    name: "{{ item }}"
+  with_items:
+    - base-devel
+    - git
+    - wget
+    - yajl
+  tags:
+    - yaourt
+    - dependencies
+
+- name: Download the package snapshot
+  become: no
+  get_url:
+    url: https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
+    dest: /tmp
+  tags:
+    - yaourt
+    - download
+
+- name: Unpack the package snapshot
+  become: no
+  unarchive:
+    src: /tmp/yaourt.tar.gz
+    dest: /tmp/
+    copy: no
+  tags:
+    - yaourt
+    - unpack
+
+- name: Build and install the package
+  become: no
+  shell: makepkg -sirc --noconfirm --needed
+  args:
+    chdir: /tmp/yaourt
+  tags:
+    - yaourt
+    - build
+    - install

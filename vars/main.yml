@@ -1,0 +1,5 @@
+---
+# vars file for pacaur-archlinux
+
+aur_packages:
+  - yaourt

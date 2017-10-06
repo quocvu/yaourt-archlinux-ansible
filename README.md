@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/quocvu/yaourt-archlinux.svg)](https://travis-ci.org/quocvu/yaourt-archlinux)
+[![Build Status](https://img.shields.io/travis/quocvu/yaourt-archlinux-ansible.svg)](https://travis-ci.org/quocvu/yaourt-archlinux-ansible)
 
 
 yaourt-archlinux
